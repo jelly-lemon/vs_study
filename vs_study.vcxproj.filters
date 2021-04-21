@@ -18,8 +18,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="list_threads.cpp">
-      <Filter>源文件\win32</Filter>
+    <ClCompile Include="unicode_ansi.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
