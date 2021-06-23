@@ -26,7 +26,7 @@ void test_0() {
 void test_1() {
 	// 这也是一个 GB2312 字节串。
 	// \u4f60\u597d 就等同于字符串 "你好"，然后保存文件时就保存为了 GB2312 的字节串
-	char s[10] = "\u4f60\u597d";	
+	char s[10] = "\u4f60\u597d";
 	cout << s << endl;
 	cout << "byte size: " << strlen(s) << endl;
 }
@@ -41,7 +41,7 @@ void test_2() {
 	// 字符串前面加 L，表示将字符串转成对应的 Unicode 编号，因为有些编号比较大，超过了 2^9 - 1，
 	// 也就是超过了一个字节可以表示的范围，所以需要两个字节来存编号。
 	// 数组里面存的都是 unicode 字符编号。
-	wchar_t s[10] = L"你好";	 
+	wchar_t s[10] = L"你好";
 	cout << s << endl;
 	// wcslen 中，两个字节才算长度为 1
 	cout << "byte size: " << wcslen(s) << endl;
@@ -67,7 +67,7 @@ void test_3() {
 
 	cout << s_new << endl;;
 }
- 
+
 int main() {
 	test_3();
 }
