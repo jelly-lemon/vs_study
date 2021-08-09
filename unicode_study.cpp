@@ -1,3 +1,8 @@
+/*
+unicode 即是字符集，也可以看作编码集，因为规定了每个字符的码位，码位占两个字节。
+所以有 unicode 字符串这种类型。
+*/
+
 #include<iostream>
 #include<windows.h>
 
