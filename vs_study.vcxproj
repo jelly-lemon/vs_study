@@ -72,27 +72,38 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\nsfocus-lm\Downloads\Compressed\curl-7.77.0\builds\libcurl-vc-x86-release-static-ipv6-sspi-schannel\include</IncludePath>
+    <TargetName>$(ProjectName)</TargetName>
+    <LibraryPath>C:\Users\nsfocus-lm\Downloads\Compressed\curl-7.77.0\builds\libcurl-vc-x86-release-static-ipv6-sspi-schannel\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Users\nsfocus-lm\Downloads\Compressed\curl-7.77.0\builds\libcurl-vc-x86-release-static-ipv6-sspi-schannel\include</IncludePath>
+    <LibraryPath>C:\Users\nsfocus-lm\Downloads\Compressed\curl-7.77.0\builds\libcurl-vc-x86-release-static-ipv6-sspi-schannel\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\nsfocus-lm\Downloads\Compressed\curl-7.77.0\builds\libcurl-vc-x86-release-static-ipv6-sspi-schannel\include</IncludePath>
+    <LibraryPath>C:\Users\nsfocus-lm\Downloads\Compressed\curl-7.77.0\builds\libcurl-vc-x86-release-static-ipv6-sspi-schannel\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Users\nsfocus-lm\Downloads\Compressed\curl-7.77.0\builds\libcurl-vc-x86-release-static-ipv6-sspi-schannel\include</IncludePath>
+    <LibraryPath>C:\Users\nsfocus-lm\Downloads\Compressed\curl-7.77.0\builds\libcurl-vc-x86-release-static-ipv6-sspi-schannel\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;HTTP_ONLY;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\nsfocus-lm\Downloads\Compressed\curl-7.77.0\builds\libcurl-vc-x86-release-static-ipv6-sspi-schannel\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Advapi32.lib;Normaliz.lib;Crypt32.lib;libcurl.lib;ws2_32.lib;winmm.lib;wldap32.lib;</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -101,7 +112,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;HTTP_ONLY;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -109,18 +120,20 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Advapi32.lib;Normaliz.lib;Crypt32.lib;libcurl.lib;ws2_32.lib;winmm.lib;wldap32.lib;</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;HTTP_ONLY;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Advapi32.lib;Normaliz.lib;Crypt32.lib;libcurl.lib;ws2_32.lib;winmm.lib;wldap32.lib;</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -129,7 +142,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;HTTP_ONLY;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -137,19 +150,16 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Advapi32.lib;Normaliz.lib;Crypt32.lib;libcurl.lib;ws2_32.lib;winmm.lib;wldap32.lib;</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="1.cpp" />
-    <ClCompile Include="list_threads.cpp" />
-    <ClCompile Include="messagebox.cpp" />
-    <ClCompile Include="test.cpp" />
-    <ClCompile Include="unicode_ansi.cpp" />
-  </ItemGroup>
   <ItemGroup>
     <None Include=".gitattributes" />
     <None Include=".gitignore" />
     <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="unicode_study.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
